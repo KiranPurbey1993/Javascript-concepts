@@ -188,3 +188,183 @@ console.log('as');
 console.log(user2.getName());
 
 ```
+
+
+```
+// console.log(+false);
+// console.log(typeof +true)
+
+// console.log(!"Kiran")
+```
+
+```
+let data = "size";
+const bird = {
+    size:"small"
+}
+
+
+// console.log(bird[data]);
+// console.log(bird["size"]);
+// console.log(bird.data);
+// console.log(bird.size);
+```
+
+```
+let number = 0;
+// console.log(number++);  //0
+// console.log(++number); //2
+// console.log(number);  //2
+
+function getVal(...arg){
+    console.log(arg)   //[21]
+}
+
+// getVal(21);
+```
+
+```
+let cal = '10*10+5';
+
+// console.log(cal);
+
+// console.log(eval(cal))
+```
+
+```
+let obj = {1:"a", hello:"b", 3:"c"}
+// console.log(obj.hasOwnProperty("1"));
+// console.log(obj.hasOwnProperty(1))
+// // console.log(obj.hasOwnProperty(hello));
+// console.log(obj.hasOwnProperty("hello"));
+```
+
+
+```
+for(let i=1;i<5;i++){
+    if(i===3) continue;
+    // console.log(i)
+}
+```
+
+```
+let person = {name:"Kiran"}
+function sayHi(age){
+    return`${this.name} is of age ${age}`
+}
+// console.log(sayHi.call(person, 21));
+// console.log(sayHi.bind(person, 21)());
+```
+
+```
+function call(){
+    return (()=>0)();
+}
+
+// console.log(typeof call())
+
+// console.log(typeof typeof 1)
+```
+
+```
+const numbers =[1,2,3];
+numbers[3] = numbers;
+// console.log(numbers)
+```
+
+```
+// console.log(!!null);
+// console.log(!!"");
+// console.log(!!1);
+
+// console.log([..."Kiran"]);
+// console.log([...[2,3,4]]);
+
+// console.log([]==[]);
+// console.log([]===[]);
+```
+
+```
+let p = {name:"Anil"};
+
+function getName(member){
+    member.name = "Sarah"
+}
+
+getName(p);
+// console.log(p);
+```
+
+```
+function Car(){
+    this.make = "Tata";
+    return {make:"Kia"}
+}
+
+let c = new Car();
+// console.log(c.make)
+```
+
+```
+(()=>{
+   
+    let x = (y=10);    //here y is global scope  , it is y = 10 and  let x=10;
+    //  console.log(x);
+
+    //  let x= y=10;
+// console.log(x);
+// console.log(y)
+})();
+// console.log(x);
+// console.log(typeof x);
+// console.log(y);
+
+
+(()=>{
+    let x =10;
+})();
+
+(()=>{
+    var x =20;
+})();
+// console.log(x)
+
+
+
+// (()=>{
+//     let x = y =10;
+// })();
+
+(()=>{
+    let x = (y =20);    //here y is global scope
+})();
+// console.log(y)
+
+
+
+let x =100;
+(()=>{
+    var x =20;
+})();
+
+// console.log(x);
+```
+
+```
+// console.log(!true - true);
+
+// console.log(true + +"10");
+```
+
+```
+var a =10;
+
+let user= {
+    getName:function(){
+        // console.log(a)            //////undefined as it is in its execution context
+        // var a = 30;
+    }
+}
+
+let t  = user.getName();
+```
